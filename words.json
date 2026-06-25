@@ -1,0 +1,30 @@
+{
+  "today": [
+    {
+      "chinese": "谢谢",
+      "pinyin": "xièxie",
+      "english": "thank you"
+    },
+    {
+      "chinese": "请",
+      "pinyin": "qǐng",
+      "english": "please"
+    },
+    {
+      "chinese": "对不起",
+      "pinyin": "duìbù qǐ",
+      "english": "sorry / excuse me"
+    },
+    {
+      "chinese": "没关系",
+      "pinyin": "méi guānxi",
+      "english": "it's okay / never mind"
+    },
+    {
+      "chinese": "好的",
+      "pinyin": "hǎo de",
+      "english": "okay / alright"
+    }
+  ],
+  "archive": []
+}

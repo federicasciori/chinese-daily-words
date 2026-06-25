@@ -1,0 +1,47 @@
+<\!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Daily Words 中文每日词汇</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <\!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <h1 class="title">🐉 中文每日词汇 🐉</h1>
+            <p class="subtitle">Daily Chinese Words | Learn 5 Words Today</p>
+        </div>
+        <div class="decorative-line"></div>
+    </header>
+
+    <\!-- Main Content -->
+    <main class="container">
+        <\!-- Today's Words Section -->
+        <section class="today-section">
+            <h2 class="section-title">📅 Today's Words</h2>
+            <div class="words-grid" id="todayWords">
+                <\!-- Words will be loaded here by script.js -->
+            </div>
+        </section>
+
+        <\!-- Archive Section -->
+        <section class="archive-section">
+            <h2 class="section-title">📚 Word Archive</h2>
+            <div id="archiveContainer">
+                <\!-- Archive items will be loaded here by script.js -->
+            </div>
+            <p id="emptyArchive" class="empty-message">No archived words yet. Come back tomorrow\!</p>
+        </section>
+    </main>
+
+    <\!-- Footer -->
+    <footer class="footer">
+        <p>Keep learning\! 学习加油！</p>
+        <p class="footer-date" id="currentDate"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

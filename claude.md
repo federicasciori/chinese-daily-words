@@ -1,4 +1,4 @@
-Create a website where every day I can go to and learn five new words in Chinese. I want to learn how to pronounce them not how to write them. 
+Create a website where every day I can go to and learn five new words in Chinese. Pronunciation is more important than learning how to write them. 
 
 
 

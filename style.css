@@ -1,0 +1,449 @@
+/* ============================================
+   Chinese Daily Words - Styling
+   Red & Gold Theme with Traditional Elements
+   ============================================ */
+
+:root {
+    --red: #DC2626;
+    --dark-red: #991B1B;
+    --gold: #D97706;
+    --dark-gold: #B45309;
+    --cream: #FEF3C7;
+    --off-white: #FFFBF0;
+    --dark-text: #1F2937;
+    --light-text: #F3F4F6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #FEF3C7 0%, #FFFBF0 100%);
+    color: var(--dark-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ============================================
+   HEADER STYLING
+   ============================================ */
+
+.header {
+    background: linear-gradient(135deg, var(--red) 0%, var(--dark-red) 100%);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "🐉";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 150px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+.header::after {
+    content: "🐉";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 150px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.header-top {
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.decorative-line {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin-top: 1.5rem;
+    border-radius: 2px;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   SECTION STYLING
+   ============================================ */
+
+.section-title {
+    font-size: 2rem;
+    color: var(--red);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border-radius: 2px;
+}
+
+/* ============================================
+   TODAY'S WORDS SECTION
+   ============================================ */
+
+.today-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    border-top: 5px solid var(--red);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.today-section::before {
+    content: "✦";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* ============================================
+   WORD CARD STYLING
+   ============================================ */
+
+.word-card {
+    background: linear-gradient(135deg, #FFF9E6 0%, #FFFBF0 100%);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.word-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--red), var(--gold), var(--red));
+}
+
+.word-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(217, 119, 6, 0.3);
+    border-color: var(--red);
+}
+
+.word-card-number {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.word-chinese {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--red);
+    margin: 1rem 0;
+    font-family: 'SimSun', 'Microsoft YaHei', sans-serif;
+    line-height: 1.2;
+}
+
+.word-pinyin {
+    font-size: 1.2rem;
+    color: var(--dark-gold);
+    margin: 0.5rem 0;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.word-english {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    border-top: 1px dashed var(--gold);
+    border-bottom: 1px dashed var(--gold);
+}
+
+/* ============================================
+   ARCHIVE SECTION
+   ============================================ */
+
+.archive-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+    border-top: 5px solid var(--gold);
+    position: relative;
+}
+
+.archive-section::before {
+    content: "📖";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+
+/* ============================================
+   ARCHIVE ITEM STYLING
+   ============================================ */
+
+.archive-day {
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--gold);
+    padding-left: 1.5rem;
+}
+
+.archive-day-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--cream) 0%, #FFF9E6 100%);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.archive-day-header:hover {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--cream) 100%);
+    transform: translateX(5px);
+}
+
+.archive-day-date {
+    font-weight: bold;
+    color: var(--red);
+    font-size: 1.1rem;
+}
+
+.archive-day-toggle {
+    color: var(--gold);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.archive-day-toggle.open {
+    transform: rotate(180deg);
+}
+
+.archive-words {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--off-white);
+    border-radius: 6px;
+}
+
+.archive-words.open {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.archive-word-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--gold);
+    text-align: center;
+}
+
+.archive-word-chinese {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--red);
+    margin-bottom: 0.5rem;
+    font-family: 'SimSun', 'Microsoft YaHei', sans-serif;
+}
+
+.archive-word-pinyin {
+    font-size: 0.9rem;
+    color: var(--dark-gold);
+    margin-bottom: 0.5rem;
+}
+
+.archive-word-english {
+    font-size: 0.85rem;
+    color: var(--dark-text);
+}
+
+.empty-message {
+    text-align: center;
+    color: #9CA3AF;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* ============================================
+   FOOTER STYLING
+   ============================================ */
+
+.footer {
+    background: linear-gradient(135deg, var(--dark-red) 0%, #7F1D1D 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 3px solid var(--gold);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer-date {
+    font-size: 0.9rem;
+    color: var(--cream);
+    margin-top: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .words-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .word-chinese {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .today-section,
+    .archive-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .word-chinese {
+        font-size: 1.8rem;
+    }
+
+    .words-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-words.open {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.word-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.word-card:nth-child(1) { animation-delay: 0.1s; }
+.word-card:nth-child(2) { animation-delay: 0.2s; }
+.word-card:nth-child(3) { animation-delay: 0.3s; }
+.word-card:nth-child(4) { animation-delay: 0.4s; }
+.word-card:nth-child(5) { animation-delay: 0.5s; }
