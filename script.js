@@ -1,8 +1,39 @@
-// Load and display words from words.json
-async function loadWords() {
+// Words data embedded directly (no CORS issues)
+const wordsData = {
+  "today": [
+    {
+      "chinese": "谢谢",
+      "pinyin": "xièxie",
+      "english": "thank you"
+    },
+    {
+      "chinese": "请",
+      "pinyin": "qǐng",
+      "english": "please"
+    },
+    {
+      "chinese": "对不起",
+      "pinyin": "duìbù qǐ",
+      "english": "sorry / excuse me"
+    },
+    {
+      "chinese": "没关系",
+      "pinyin": "méi guānxi",
+      "english": "it's okay / never mind"
+    },
+    {
+      "chinese": "好的",
+      "pinyin": "hǎo de",
+      "english": "okay / alright"
+    }
+  ],
+  "archive": []
+};
+
+// Load and display words
+function loadWords() {
     try {
-        const response = await fetch('words.json');
-        const data = await response.json();
+        const data = wordsData;
 
         // Display today's words
         displayTodayWords(data.today);
@@ -17,7 +48,7 @@ async function loadWords() {
     } catch (error) {
         console.error('Error loading words:', error);
         document.getElementById('todayWords').innerHTML =
-            '<p style="grid-column: 1/-1; text-align: center; color: #999;">Error loading words. Please check words.json file.</p>';
+            '<p style="grid-column: 1/-1; text-align: center; color: #999;">Error loading words.</p>';
     }
 }
 
